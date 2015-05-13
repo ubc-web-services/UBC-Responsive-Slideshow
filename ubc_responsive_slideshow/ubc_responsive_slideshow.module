@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Code for the UBC Responsive Slideshow feature.
+ */
+
+include_once 'ubc_responsive_slideshow.features.inc';
+
+
+// this function adds css and js
+function ubc_responsive_slideshow_init() {
+  drupal_add_css(drupal_get_path('module', 'ubc_responsive_slideshow') . '/css/slideshow.css');
+  //drupal_add_js(drupal_get_path('module', 'ubc_responsive_slideshow') . '/js/jquery.flexslider-min.js', array('type' => 'external', 'group'=>JS_LIBRARY, 'weight' => 0));
+  drupal_add_js(drupal_get_path('module', 'ubc_responsive_slideshow') . '/js/jquery.flexslider-min.js');
+  drupal_add_js(drupal_get_path('module', 'ubc_responsive_slideshow') . '/js/slideshow.js');
+}
